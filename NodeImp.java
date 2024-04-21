@@ -53,10 +53,14 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public Node findPredecessor(int id, boolean traceFlag) throws RemoteException {
         Node n_prime = this;
 
-        while ((id <= n_prime.getID() && id > n_prime.successor().getID()) && (n_prime.getID() != n_prime.successor().getID())){
+        int start = n_prime.getID();
+        int end = n_prime.successor().getID();
+        while (!isInIntervalEndInclusive(id, start, end)){
             System.out.println("sanity check " + n_prime.getURL() + " " + n_prime.successor().getURL() + " " + id);
             System.out.println(fingerTable[0].getID() + " " + fingerTable[1].getID() + " " + fingerTable[2].getID() + " " + fingerTable[3].getID() + " " + fingerTable[4].getID());
             n_prime = n_prime.closestPrecedingFinger(id);
+            start = n_prime.getID();
+            end = n_prime.successor().getID();
         }
 
         return n_prime;
@@ -116,18 +120,15 @@ public class NodeImp extends UnicastRemoteObject implements Node {
 
     public Node insert(String word, String definition) throws RemoteException {
         int key = FNV1aHash.hash32(word) % 31;
-        Node successorNode = findSuccessor(key, false);
-
-        if (successorNode.getID() == this.ID) {
+        if (key == this.ID) {
             System.out.println("Inserting word: " + word);
             dictionary.put(word, definition);
             return this;
         } 
-        
-        else {
-            successorNode.setDictionary(word, definition);
-            return successorNode;
-        }
+
+        Node successorNode = findSuccessor(key, false);
+        successorNode.setDictionary(word, definition);
+        return successorNode;
     }
 
     public String lookup(String word) throws RemoteException {
@@ -204,9 +205,9 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         this.successor.setPredecessor(this);
 
         for (int i = 0; i < 4; i++) {
-            int finger_i_start = modulo31Add(this.ID, (1 << (i + 1))) % 31;
-
-            if ((finger_i_start > this.ID) && (finger_i_start <= fingerTable[i].getID())) {
+            int finger_i_start = modulo31Add(this.ID, (1 << (i + 1)));
+            
+            if (isInIntervalEndInclusive(finger_i_start, this.ID, fingerTable[i].getID())) {
                 fingerTable[i + 1] = fingerTable[i];
             } 
             else {
@@ -220,7 +221,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public void updateOthers() throws RemoteException {
         System.out.println("Updating other nodes...");
         for (int i = 0; i < 5; i++) {
-            int idMinus2PowI = modulo31Add(this.ID, -(1 << i)+1) % 31;
+            int idMinus2PowI = modulo31Add(this.ID, -(1 << i)+1);
             Node p = findPredecessor(idMinus2PowI, false);
             p.updateFingerTable(this, i);
         }
@@ -231,30 +232,34 @@ public class NodeImp extends UnicastRemoteObject implements Node {
 
         //if (this == s || isInInterval(sID, this.ID, fingerTable[i].getID())) {
             // sID is in the range of [this, fingerTable[i])
-        int start = modulo31Add(this.ID, (1 << i)) % 31;
+        int start = modulo31Add(this.ID, (1 << i));
         int end = fingerTable[i].getID();
-        if (isInInterval(sID, start, end)) {
+        if (isInIntervalStartInclusive(sID, start, end)) {
             if (i == 0) {
                 this.successor = s;
             }
-            Node temp = fingerTable[i];
-            int j = i;
-            while(j < fingerTable.length && fingerTable[j] == temp){
-                fingerTable[j] = s;
-                j++;
-            }
+            fingerTable[i] = s;
             Node p = this.predecessor();
             p.updateFingerTable(s, i);
         }
         printFingerTable();
     }
 
-    public boolean isInInterval(int id, int start, int end) {
+    public boolean isInIntervalStartInclusive(int id, int start, int end) {
         if (start < end) {
             return id >= start && id < end;
         } 
         else {
             return id >= start || id < end;
+        }
+    }
+
+    public boolean isInIntervalEndInclusive(int id, int start, int end) {
+        if (start < end) {
+            return id > start && id <= end;
+        } 
+        else {
+            return id > start || id <= end;
         }
     }
 
