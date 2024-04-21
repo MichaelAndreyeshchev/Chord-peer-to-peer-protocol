@@ -134,17 +134,15 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public String lookup(String word) throws RemoteException {
         int key = FNV1aHash.hash32(word) % 31;
         System.out.println("Looking up word: " + word + " with key: " + key);
-
-        Node successorNode = findSuccessor(key, false);
-
-        if (successorNode.getID() == this.ID) {
+        
+        if (key == this.ID) {
             System.out.println(dictionary.getOrDefault(word, "Not found"));
             return dictionary.getOrDefault(word, "Not found");
         } 
+
+        Node successorNode = findSuccessor(key, false);
         
-        else {
-            return successorNode.getDictionary().getOrDefault(word, "Not found");
-        }
+        return successorNode.getDictionary().getOrDefault(word, "Not found");
     }
 
     public String printFingerTable() throws RemoteException {
