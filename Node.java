@@ -5,11 +5,12 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface Node extends Remote {
-  public String  findSuccessor (int key, boolean traceFlag) throws RemoteException;
-  public String  findPredecessor (int key, boolean traceFlag) throws RemoteException;
-  public String  closestPrecedingFinger (int key) throws RemoteException;
-  public String  successor () throws RemoteException;
-  public String  predecessor  () throws RemoteException;
+  public Node  findSuccessor (int key, boolean traceFlag) throws RemoteException;
+  public Node  findPredecessor (int key, boolean traceFlag) throws RemoteException;
+  public Node  closestPrecedingFinger (int key) throws RemoteException;
+  public Node  successor () throws RemoteException;
+  public Node  predecessor  () throws RemoteException;
+  public void setPredecessor (Node node) throws RemoteException;
   public boolean acquireJoinLock (String nodeURL) throws RemoteException;
   public boolean releaseJoinLock (String nodeURL) throws RemoteException;
   public boolean insert (String word, String definition) throws RemoteException;
