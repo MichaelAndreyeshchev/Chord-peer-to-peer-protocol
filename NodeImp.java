@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -27,7 +28,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     private static final Object joinLock = new Object();
     private boolean isLocked = false;
 
-    NodeImp(String URL) throws RemoteException, IOException {
+    NodeImp(String URL) throws RemoteException, IOException, NotBoundException {
         super();
         fh = new FileHandler("Node" + this.ID + ".log");
         logger.addHandler(fh);
@@ -42,7 +43,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         this.predecessor = null;
         this.successor = this;
 
-        for (int i = 0; i < 31; ++i) {
+        for (int i = 0; i < 31; i++) {
             fingerTable[i] = this; 
         }
     }
@@ -62,7 +63,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
 
     public Node findPredecessor(int ID, boolean traceFlag) throws RemoteException {
         Node node = this;
-        while (ID <= node.getID() || ID > node.successor().getID()) {
+        while (!(ID > node.getID() && ID <= node.successor().getID()) && node.getID() != node.successor().getID()){
             node = node.closestPrecedingFinger(ID);
         }
         return node;
@@ -127,8 +128,10 @@ public class NodeImp extends UnicastRemoteObject implements Node {
 
     public String lookup(String word) throws RemoteException {
         int key = FNV1aHash.hash32(word);
+        System.out.println("Looking up word: " + word + " with key: " + key);
         Node successorNode = findSuccessor(key, false);
         if (successorNode.getID() == this.ID) {
+            System.out.println(dictionary.getOrDefault(word, "Not found"));
             return dictionary.getOrDefault(word, "Not found");
         } 
         
@@ -138,7 +141,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public String printFingerTable() throws RemoteException {
-        StringBuilder sb = new StringBuilder("Finger Table for Node " + this.ID + ":\n");
+        StringBuilder sb = new StringBuilder("Finger Table for Node " + this.ID + " ("+ this.URL + "):\n");
         
         for (int i = 0; i < fingerTable.length; i++) {
             int start = modulo31Add(this.ID, (1 << i));
@@ -183,11 +186,13 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public void initFingerTable(Node existingNode) throws RemoteException {
+        System.out.println("Initializing finger table...");
         fingerTable[0] = existingNode.findSuccessor(modulo31Add(this.ID, 1), false);
         this.predecessor = fingerTable[0].predecessor();
         fingerTable[0].setPredecessor(this);
 
-        for (int i = 0; i < 31; i++) {
+        for (int i = 0; i < 30; i++) {
+            System.out.println("loop iteration: " + i);
             int start = modulo31Add(this.ID, (1 << (i + 1)));
 
             if (start >= this.ID && start < fingerTable[i].getID()) {
@@ -198,9 +203,11 @@ public class NodeImp extends UnicastRemoteObject implements Node {
                 fingerTable[i + 1] = existingNode.findSuccessor(start, false);
             }
         }
+        printFingerTable();
     }
 
     public void updateOthers() throws RemoteException {
+        System.out.println("Updating other nodes...");
         for (int i = 0; i < 31; i++) {
             int idMinus2PowI = modulo31Add(this.ID, -(1 << i));
             Node p = findPredecessor(modulo31Add(idMinus2PowI, 1), false);
@@ -216,6 +223,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
             Node p = this.predecessor();
             p.updateFingerTable(s, i);
         }
+        printFingerTable();
     }
 
     public boolean isInInterval(int key, int start, int end) {
@@ -231,6 +239,37 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         return (int) result; // Cast back to int, safely within the range
     }
 
+    public static void main(String[] args) throws RemoteException, IOException, NotBoundException {
+        if (args.length != 2) {
+            System.out.println("Usage: java NodeImp <nodeURL> <node0IP>");
+            System.exit(1);
+        }
+
+        String name = "node-" + args[0];
+        NodeImp node;
+        try {
+            node = new NodeImp(name);
+            Registry registry = LocateRegistry.createRegistry(1099);
+            registry.rebind(name, node);
+            System.out.println("Node " + name + " is running...");
+        } 
+        catch (Exception e) {
+            node = new NodeImp(name);
+            Registry registry = LocateRegistry.getRegistry(1099);
+            registry.rebind(name, node);
+            System.out.println("Node " + name + " is running...");
+        }
+
+        if (!node.URL.equals("node-0")){
+            System.out.println("Joining node-0...");
+            Node node0 = (Node) LocateRegistry.getRegistry(args[1], 1099).lookup("node-0");
+            node.join(node0);
+            System.out.println("Node " + name + " joined node-0");
+        }
+        else{
+            node.join(null);
+        }
+    }
 }
     
 
