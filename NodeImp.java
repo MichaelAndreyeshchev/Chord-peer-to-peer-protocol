@@ -185,11 +185,16 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         this.predecessor = node;
     }
 
+    public void setSuccessor(Node node) throws RemoteException { 
+        this.successor = node;
+    }
+
     public void initFingerTable(Node existingNode) throws RemoteException {
         System.out.println("Initializing finger table...");
-        fingerTable[0] = existingNode.findSuccessor(modulo31Add(this.ID, 1), false);
-        this.predecessor = fingerTable[0].predecessor();
-        fingerTable[0].setPredecessor(this);
+        fingerTable[0].setSuccessor(existingNode.findSuccessor(modulo31Add(this.ID, 1), false));
+        this.successor = fingerTable[0];
+        this.predecessor = this.successor().predecessor();
+        successor.setPredecessor(this);
 
         for (int i = 0; i < 30; i++) {
             System.out.println("loop iteration: " + i);
@@ -235,8 +240,8 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public int modulo31Add(int n, int m) {
-        long result = ((long) n + (long) m) & 0x7FFFFFFFL; // long is used to avoid overflow
-        return (int) result; // Cast back to int, safely within the range
+        int result = (n +m) & Integer.MAX_VALUE; // long is used to avoid overflow
+        return result; // Cast back to int, safely within the range
     }
 
     public static void main(String[] args) throws RemoteException, IOException, NotBoundException {

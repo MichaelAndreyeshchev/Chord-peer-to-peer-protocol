@@ -11,6 +11,7 @@ public interface Node extends Remote {
   public Node  successor () throws RemoteException;
   public Node  predecessor  () throws RemoteException;
   public void setPredecessor (Node node) throws RemoteException;
+  public void setSuccessor (Node node) throws RemoteException;
   public boolean acquireJoinLock (String nodeURL) throws RemoteException;
   public boolean releaseJoinLock (String nodeURL) throws RemoteException;
   public boolean insert (String word, String definition) throws RemoteException;
