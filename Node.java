@@ -17,7 +17,7 @@ public interface Node extends Remote {
   public boolean releaseJoinLock (String nodeURL) throws RemoteException;
   public void setDictionary(String word, String definition) throws RemoteException;
   public ConcurrentHashMap<String, String> getDictionary() throws RemoteException;
-  public boolean insert (String word, String definition) throws RemoteException;
+  public Node insert (String word, String definition) throws RemoteException;
   public String  lookup (String word) throws RemoteException;
   public String  printFingerTable() throws RemoteException;
   public String  printDictionary() throws RemoteException;

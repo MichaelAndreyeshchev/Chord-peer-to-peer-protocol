@@ -47,15 +47,8 @@ public class Client {
                         String meaning = scanner.nextLine();
 
                         try {
-                            boolean success = node.insert(insertWord, meaning);
-                            if (success) {
-                                System.out.println("Result status: Inserted word " + insertWord + " at node " + URL);
-                            } 
-                            
-                            else {
-                                System.out.println("Error: Insertion failed.");
-                            }
-
+                            Node n = node.insert(insertWord, meaning);
+                            System.out.println("Result status: Inserted word " + insertWord + " at node " + n.getURL());
                         } 
                         
                         catch (Exception e) {

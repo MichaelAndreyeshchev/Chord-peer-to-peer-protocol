@@ -30,11 +30,7 @@ public class DictionaryLoader {
                     String word = parts[0].trim();
                     String meaning = parts[1].trim();
 
-                    boolean success = node.insert(word, meaning);
-
-                    if (!success) {
-                        System.out.println("Failed to insert: " + word);
-                    }
+                    node.insert(word, meaning);
 
                 } 
                 

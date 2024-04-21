@@ -29,7 +29,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     NodeImp(String URL) throws RemoteException, IOException, NotBoundException {
         super();
         this.URL = URL;
-        this.ID = FNV1aHash.hash32(URL); 
+        this.ID = FNV1aHash.hash32(URL) % 31; 
         this.dictionary = new ConcurrentHashMap<>();
         this.predecessor = null;
         this.successor = null;
@@ -53,9 +53,9 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public Node findPredecessor(int id, boolean traceFlag) throws RemoteException {
         Node n_prime = this;
 
-        //while (!(ID > node.getID() && ID <= node.successor().getID()) && (node.getID() != node.successor().getID())){
-        
-        while (!(id > n_prime.getID() && id <= n_prime.successor().getID()) && (n_prime.getID() != n_prime.successor().getID())){
+        while ((id <= n_prime.getID() && id > n_prime.successor().getID()) && (n_prime.getID() != n_prime.successor().getID())){
+            System.out.println("sanity check " + n_prime.getURL() + " " + n_prime.successor().getURL() + " " + id);
+            System.out.println(fingerTable[0].getID() + " " + fingerTable[1].getID() + " " + fingerTable[2].getID() + " " + fingerTable[3].getID() + " " + fingerTable[4].getID());
             n_prime = n_prime.closestPrecedingFinger(id);
         }
 
@@ -65,7 +65,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public Node closestPrecedingFinger(int id) throws RemoteException {
         for (int i = 4; i >= 0; i--) {
             Node finger_i_node = fingerTable[i];
-            if (finger_i_node.getID() > this.ID && finger_i_node.getID() < id) {
+            if (finger_i_node.getID() > this.ID || finger_i_node.getID() < id) {
                 return finger_i_node;
             }
         }
@@ -106,6 +106,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public void setDictionary(String word, String definition) {
+        System.out.println("Inserting word: " + word);
         dictionary.put(word, definition);
     }
 
@@ -113,23 +114,24 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         return dictionary;
     }
 
-    public boolean insert(String word, String definition) throws RemoteException {
-        int key = FNV1aHash.hash32(word);
+    public Node insert(String word, String definition) throws RemoteException {
+        int key = FNV1aHash.hash32(word) % 31;
         Node successorNode = findSuccessor(key, false);
 
         if (successorNode.getID() == this.ID) {
+            System.out.println("Inserting word: " + word);
             dictionary.put(word, definition);
-            return true;
+            return this;
         } 
         
         else {
             successorNode.setDictionary(word, definition);
-            return true;
+            return successorNode;
         }
     }
 
     public String lookup(String word) throws RemoteException {
-        int key = FNV1aHash.hash32(word);
+        int key = FNV1aHash.hash32(word) % 31;
         System.out.println("Looking up word: " + word + " with key: " + key);
 
         Node successorNode = findSuccessor(key, false);
@@ -202,13 +204,11 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         this.successor.setPredecessor(this);
 
         for (int i = 0; i < 4; i++) {
-            System.out.println("loop iteration: " + i);
             int finger_i_start = modulo31Add(this.ID, (1 << (i + 1)));
 
-            if ((finger_i_start > this.ID) && (finger_i_start < fingerTable[i].getID())) {
+            if ((finger_i_start > this.ID) && (finger_i_start <= fingerTable[i].getID())) {
                 fingerTable[i + 1] = fingerTable[i];
             } 
-            
             else {
                 fingerTable[i + 1] = n_prime.findSuccessor(finger_i_start, false);
             }
