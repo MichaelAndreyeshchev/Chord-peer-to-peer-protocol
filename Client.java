@@ -48,7 +48,7 @@ public class Client {
 
                         try {
                             Node n = node.insert(insertWord, meaning);
-                            System.out.println("Result status: Inserted word " + insertWord + " at node " + n.getURL());
+                            System.out.println("Result status: Inserted word " + insertWord + " at node " + n.getURL() + "with key " + FNV1aHash.hash32(insertWord) % 31);
                         } 
                         
                         catch (Exception e) {

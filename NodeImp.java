@@ -204,7 +204,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         this.successor.setPredecessor(this);
 
         for (int i = 0; i < 4; i++) {
-            int finger_i_start = modulo31Add(this.ID, (1 << (i + 1)));
+            int finger_i_start = modulo31Add(this.ID, (1 << (i + 1))) % 31;
 
             if ((finger_i_start > this.ID) && (finger_i_start <= fingerTable[i].getID())) {
                 fingerTable[i + 1] = fingerTable[i];
@@ -220,8 +220,8 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public void updateOthers() throws RemoteException {
         System.out.println("Updating other nodes...");
         for (int i = 0; i < 5; i++) {
-            int idMinus2PowI = this.ID + -(1 << i);
-            Node p = findPredecessor(idMinus2PowI + 1, false);
+            int idMinus2PowI = modulo31Add(this.ID, -(1 << i)+1) % 31;
+            Node p = findPredecessor(idMinus2PowI, false);
             p.updateFingerTable(this, i);
         }
     }
@@ -230,17 +230,37 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         int sID = s.getID();
 
         //if (this == s || isInInterval(sID, this.ID, fingerTable[i].getID())) {
-        if ((sID >= modulo31Add(this.ID, (1 << i))) && sID < fingerTable[i].getID()) {
-            fingerTable[i] = s;
+            // sID is in the range of [this, fingerTable[i])
+        int start = modulo31Add(this.ID, (1 << i)) % 31;
+        int end = fingerTable[i].getID();
+        if (isInInterval(sID, start, end)) {
+            if (i == 0) {
+                this.successor = s;
+            }
+            Node temp = fingerTable[i];
+            int j = i;
+            while(j < fingerTable.length && fingerTable[j] == temp){
+                fingerTable[j] = s;
+                j++;
+            }
             Node p = this.predecessor();
             p.updateFingerTable(s, i);
         }
         printFingerTable();
     }
 
+    public boolean isInInterval(int id, int start, int end) {
+        if (start < end) {
+            return id >= start && id < end;
+        } 
+        else {
+            return id >= start || id < end;
+        }
+    }
+
     public int modulo31Add(int n, int m) {
         int result = (n + m) & Integer.MAX_VALUE; 
-        return result; 
+        return result % 31; 
     }
 
     public static void main(String[] args) throws RemoteException, IOException, NotBoundException {
