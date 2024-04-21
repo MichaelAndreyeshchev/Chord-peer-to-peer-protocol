@@ -56,8 +56,8 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         int start = n_prime.getID();
         int end = n_prime.successor().getID();
         while (!isInIntervalEndInclusive(id, start, end)){
-            System.out.println("sanity check " + n_prime.getURL() + " " + n_prime.successor().getURL() + " " + id);
-            System.out.println(fingerTable[0].getID() + " " + fingerTable[1].getID() + " " + fingerTable[2].getID() + " " + fingerTable[3].getID() + " " + fingerTable[4].getID());
+            //System.out.println("sanity check " + n_prime.getURL() + " " + n_prime.successor().getURL() + " " + id);
+            //System.out.println(fingerTable[0].getID() + " " + fingerTable[1].getID() + " " + fingerTable[2].getID() + " " + fingerTable[3].getID() + " " + fingerTable[4].getID());
             n_prime = n_prime.closestPrecedingFinger(id);
             start = n_prime.getID();
             end = n_prime.successor().getID();
@@ -69,7 +69,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public Node closestPrecedingFinger(int id) throws RemoteException {
         for (int i = 4; i >= 0; i--) {
             Node finger_i_node = fingerTable[i];
-            if (finger_i_node.getID() > this.ID || finger_i_node.getID() < id) {
+            if (isInIntervalExclusive(finger_i_node.getID(), this.ID, id)) {
                 return finger_i_node;
             }
         }
@@ -221,7 +221,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     public void updateOthers() throws RemoteException {
         System.out.println("Updating other nodes...");
         for (int i = 0; i < 5; i++) {
-            int idMinus2PowI = modulo31Add(this.ID, -(1 << i)+1);
+            int idMinus2PowI = modulo31Add(this.ID, -(1 << i) + 1);
             Node p = findPredecessor(idMinus2PowI, false);
             p.updateFingerTable(this, i);
         }
@@ -263,6 +263,15 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         }
     }
 
+    public boolean isInIntervalExclusive(int id, int start, int end) {
+        if (start < end) {
+            return id > start && id < end;
+        } 
+        else {
+            return id > start || id < end;
+        }
+    }
+
     public int modulo31Add(int n, int m) {
         int result = (n + m) & Integer.MAX_VALUE; 
         return result % 31; 
@@ -292,8 +301,10 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         if (!node.URL.equals("node-0")){
             System.out.println("Joining node-0...");
             Node node0 = (Node) LocateRegistry.getRegistry(args[1], 1099).lookup("node-0");
+            while(!node0.acquireJoinLock(name));
             node.join(node0);
             System.out.println("Node " + name + " joined node-0");
+            node0.releaseJoinLock(name);
         }
 
         else{
