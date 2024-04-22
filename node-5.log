@@ -1,119 +1,65 @@
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
+Finger Table for Node 14 (node-5) | Predecessor: node-1 | Successor: node-0:
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
-Finger Table for Node 14 (node-5):
+Finger Table for Node 14 (node-5) | Predecessor: node-1 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
+Finger Table for Node 14 (node-5) | Predecessor: node-1 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
+Finger Table for Node 14 (node-5) | Predecessor: node-1 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
+Finger Table for Node 14 (node-5) | Predecessor: node-1 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
+Finger Table for Node 14 (node-5) | Predecessor: node-1 | Successor: node-7:
 Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
-Finger Table for Node 14 (node-5):
+Finger Table for Node 14 (node-5) | Predecessor: node-3 | Successor: node-7:
 Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
+Finger Table for Node 14 (node-5) | Predecessor: node-3 | Successor: node-0:
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
-Start Key: 15 | Finger's Node Key: 30 | Finger's Node URL: node-6
-Finger Table for Node 14 (node-5):
-Start Key: 15 | Finger's Node Key: 15 | Finger's Node URL: node-7
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
+Finger Table for Node 14 (node-5) | Predecessor: node-3 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
+Finger Table for Node 14 (node-5) | Predecessor: node-3 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
+Start Key: 15 | Finger's Node Key: 12 | Finger's Node URL: node-1
+Finger Table for Node 14 (node-5) | Predecessor: node-3 | Successor: node-0:
+Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0
 Start Key: 15 | Finger's Node Key: 27 | Finger's Node URL: node-0

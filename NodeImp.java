@@ -19,7 +19,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     private int ID;
     private String URL;
     private Node predecessor;
-    private Node successor;
+    //private Node successor;
     private ConcurrentHashMap<String, String> dictionary;
     private Node[] fingerTable;
 
@@ -32,7 +32,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         this.ID = FNV1aHash.hash32(URL) % 31; 
         this.dictionary = new ConcurrentHashMap<>();
         this.predecessor = null;
-        this.successor = null;
+        //this.successor = null;
         fingerTable = new Node[5];
            
     }
@@ -78,7 +78,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public Node successor() throws RemoteException {
-        return successor;
+        return fingerTable[0];
     }
 
     public Node predecessor() throws RemoteException {
@@ -146,7 +146,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public String printFingerTable() throws RemoteException {
-        StringBuilder sb = new StringBuilder("Finger Table for Node " + this.ID + " ("+ this.URL + "):\n");
+        StringBuilder sb = new StringBuilder("Finger Table for Node " + this.ID + " ("+ this.URL + ") | " + "Predecessor: " + this.predecessor().getURL() + " | Successor: " + this.successor().getURL() + ":\n");
         
         for (int i = 0; i < fingerTable.length; i++) {
             int start = modulo31Add(this.ID, 1);
@@ -183,7 +183,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
             }
 
             this.predecessor = this; 
-            this.successor = this;
+            //this.successor = this;
         }
     }
 
@@ -192,15 +192,20 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public void setSuccessor(Node node) throws RemoteException { 
-        this.successor = node;
+        //this.successor = node;
+        fingerTable[0] = node;
     }
 
     public void initFingerTable(Node n_prime) throws RemoteException {
         System.out.println("Initializing finger table...");
-        fingerTable[0] = n_prime.findSuccessor(modulo31Add(this.ID, 1), false);
-        this.successor = fingerTable[0];
-        this.predecessor = this.successor.predecessor();
-        this.successor.setPredecessor(this);
+        this.fingerTable[0] = n_prime.findSuccessor(modulo31Add(this.ID, 1), false);
+        //this.successor = fingerTable[0];
+        this.predecessor = this.fingerTable[0].predecessor();
+
+        //if (this.getURL().equals("node-3")) {
+        //    System.out.println("!!!CHECKPOINT CHECK: " + this.fingerTable[0].getURL());
+        //}
+        this.fingerTable[0].setPredecessor(this);
 
         for (int i = 0; i < 4; i++) {
             int finger_i_start = modulo31Add(this.ID, (1 << (i + 1)));
@@ -233,9 +238,9 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         int start = modulo31Add(this.ID, (1 << i));
         int end = fingerTable[i].getID();
         if (isInIntervalStartInclusive(sID, start, end)) {
-            if (i == 0) {
-                this.successor = s;
-            }
+            //if (i == 0) {
+            //    this.successor = s;
+            //}
             fingerTable[i] = s;
             Node p = this.predecessor();
             p.updateFingerTable(s, i);
