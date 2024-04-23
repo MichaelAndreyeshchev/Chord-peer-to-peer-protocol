@@ -29,11 +29,11 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     NodeImp(String URL) throws RemoteException, IOException, NotBoundException {
         super();
         this.URL = URL;
-        this.ID = FNV1aHash.hash32(URL) % 31; 
+        this.ID = FNV1aHash.hash32(URL); 
         this.dictionary = new ConcurrentHashMap<>();
         this.predecessor = null;
         //this.successor = null;
-        fingerTable = new Node[5];
+        fingerTable = new Node[31];
            
     }
 
@@ -67,7 +67,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public Node closestPrecedingFinger(int id) throws RemoteException {
-        for (int i = 4; i >= 0; i--) {
+        for (int i = 30; i >= 0; i--) {
             Node finger_i_node = fingerTable[i];
             if (isInIntervalExclusive(finger_i_node.getID(), this.ID, id)) {
                 return finger_i_node;
@@ -119,7 +119,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public Node insert(String word, String definition) throws RemoteException {
-        int key = FNV1aHash.hash32(word) % 31;
+        int key = FNV1aHash.hash32(word);
         if (key == this.ID) {
             System.out.println("Inserting word: " + word);
             dictionary.put(word, definition);
@@ -132,7 +132,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public String lookup(String word) throws RemoteException {
-        int key = FNV1aHash.hash32(word) % 31;
+        int key = FNV1aHash.hash32(word);
         System.out.println("Looking up word: " + word + " with key: " + key);
         
         if (key == this.ID) {
@@ -145,9 +145,13 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         return successorNode.getDictionary().getOrDefault(word, "Not found");
     }
 
-    public String printFingerTable() throws RemoteException {
+    public String printFingerTable(boolean joined) throws RemoteException {
         StringBuilder sb = new StringBuilder("Finger Table for Node " + this.ID + " ("+ this.URL + ") | " + "Predecessor: " + this.predecessor().getURL() + " | Successor: " + this.successor().getURL() + ":\n");
         
+        if (joined) {
+            sb.append("\n\n" + this.getURL() + " (key = " + this.getID() + ") joined!\n\n");
+        }
+
         for (int i = 0; i < fingerTable.length; i++) {
             int start = modulo31Add(this.ID, 1);
             int fingerID = fingerTable[i].getID();
@@ -178,13 +182,26 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         } 
         
         else {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 31; i++) {
                 fingerTable[i] = this; 
             }
 
             this.predecessor = this; 
             //this.successor = this;
         }
+
+        System.out.println();
+        System.out.println(this.getURL() + " Successor = " + this.successor().getURL() + " | " + this.getURL() + " Predecessor = " + this.predecessor().getURL());
+        
+
+        String j = predecessor().getURL();
+        Node node_j = this.predecessor;
+        while (!j.equals(this.getURL())) {
+            System.out.println(node_j.getURL() + " Successor = " + node_j.successor().getURL() + " | " + node_j.getURL() + " Predecessor = " + node_j.predecessor().getURL());
+            node_j = node_j.predecessor();
+            j = node_j.getURL();
+        }
+        System.out.println();
     }
 
     public void setPredecessor(Node node) throws RemoteException { 
@@ -207,7 +224,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
         //}
         this.fingerTable[0].setPredecessor(this);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 30; i++) {
             int finger_i_start = modulo31Add(this.ID, (1 << (i + 1)));
             
             if (isInIntervalEndInclusive(finger_i_start, this.ID, fingerTable[i].getID())) {
@@ -218,12 +235,12 @@ public class NodeImp extends UnicastRemoteObject implements Node {
             }
         }
         System.out.println("Finished initializing finger table...");
-        printFingerTable();
+        printFingerTable(false);
     }
 
     public void updateOthers() throws RemoteException {
         System.out.println("Updating other nodes...");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 31; i++) {
             int idMinus2PowI = modulo31Add(this.ID, -(1 << i) + 1);
             Node p = findPredecessor(idMinus2PowI, false);
             p.updateFingerTable(this, i);
@@ -245,7 +262,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
             Node p = this.predecessor();
             p.updateFingerTable(s, i);
         }
-        printFingerTable();
+        printFingerTable(true);
     }
 
     public boolean isInIntervalStartInclusive(int id, int start, int end) {
@@ -277,7 +294,7 @@ public class NodeImp extends UnicastRemoteObject implements Node {
 
     public int modulo31Add(int n, int m) {
         int result = (n + m) & Integer.MAX_VALUE; 
-        return result % 31; 
+        return result; 
     }
 
     public static void main(String[] args) throws RemoteException, IOException, NotBoundException {

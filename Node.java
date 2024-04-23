@@ -19,7 +19,7 @@ public interface Node extends Remote {
   public ConcurrentHashMap<String, String> getDictionary() throws RemoteException;
   public Node insert (String word, String definition) throws RemoteException;
   public String  lookup (String word) throws RemoteException;
-  public String  printFingerTable() throws RemoteException;
+  public String  printFingerTable(boolean joined) throws RemoteException;
   public String  printDictionary() throws RemoteException;
   public int getID() throws RemoteException;
   public String getURL() throws RemoteException;
