@@ -1,0 +1,298 @@
+Finger Table for Node 1405366768 (node-0) | Predecessor: node-7 | Successor: node-1:
+Start Key: 1405366769 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366770 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366772 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366776 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366784 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366800 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366832 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405366896 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405367024 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405367280 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405367792 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405368816 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405370864 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405374960 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405383152 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405399536 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405432304 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405497840 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405628912 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1405891056 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1406415344 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1407463920 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1409561072 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1413755376 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1422143984 | Finger's Node Key: 1422144387 | Finger's Node URL: node-1
+Start Key: 1438921200 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1472475632 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1539584496 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1673802224 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1942237680 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 331624944 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-0 = 182 
+
+________________________________________________________
+
+Finger Table for Node 1422144387 (node-1) | Predecessor: node-0 | Successor: node-2:
+Start Key: 1422144388 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144389 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144391 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144395 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144403 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144419 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144451 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144515 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144643 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422144899 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422145411 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422146435 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422148483 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422152579 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422160771 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422177155 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422209923 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422275459 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422406531 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1422668675 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1423192963 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1424241539 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1426338691 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1430532995 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1438921603 | Finger's Node Key: 1438922006 | Finger's Node URL: node-2
+Start Key: 1455698819 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1489253251 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1556362115 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1690579843 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1959015299 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 348402563 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-1 = 2
+
+________________________________________________________
+
+Finger Table for Node 1438922006 (node-2) | Predecessor: node-1 | Successor: node-3:
+Start Key: 1438922007 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922008 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922010 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922014 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922022 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922038 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922070 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922134 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922262 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438922518 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438923030 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438924054 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438926102 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438930198 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438938390 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438954774 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1438987542 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1439053078 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1439184150 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1439446294 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1439970582 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1441019158 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1443116310 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1447310614 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1455699222 | Finger's Node Key: 1455699625 | Finger's Node URL: node-3
+Start Key: 1472476438 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1506030870 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1573139734 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1707357462 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1975792918 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 365180182 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-2 = 2
+
+________________________________________________________
+
+Finger Table for Node 1455699625 (node-3) | Predecessor: node-2 | Successor: node-4:
+Start Key: 1455699626 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699627 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699629 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699633 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699641 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699657 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699689 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699753 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455699881 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455700137 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455700649 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455701673 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455703721 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455707817 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455716009 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455732393 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455765161 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455830697 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1455961769 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1456223913 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1456748201 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1457796777 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1459893929 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1464088233 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1472476841 | Finger's Node Key: 1472477244 | Finger's Node URL: node-4
+Start Key: 1489254057 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1522808489 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1589917353 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1724135081 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1992570537 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 381957801 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-3 = 3
+
+________________________________________________________
+
+Finger Table for Node 1472477244 (node-4) | Predecessor: node-3 | Successor: node-5:
+Start Key: 1472477245 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477246 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477248 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477252 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477260 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477276 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477308 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477372 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477500 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472477756 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472478268 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472479292 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472481340 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472485436 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472493628 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472510012 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472542780 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472608316 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1472739388 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1473001532 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1473525820 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1474574396 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1476671548 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1480865852 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1489254460 | Finger's Node Key: 1489254863 | Finger's Node URL: node-5
+Start Key: 1506031676 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1539586108 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1606694972 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1740912700 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 2009348156 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 398735420 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-4 = 0
+
+________________________________________________________
+
+Finger Table for Node 1489254863 (node-5) | Predecessor: node-4 | Successor: node-6:
+Start Key: 1489254864 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254865 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254867 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254871 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254879 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254895 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254927 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489254991 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489255119 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489255375 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489255887 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489256911 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489258959 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489263055 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489271247 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489287631 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489320399 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489385935 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489517007 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1489779151 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1490303439 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1491352015 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1493449167 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1497643471 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1506032079 | Finger's Node Key: 1506032482 | Finger's Node URL: node-6
+Start Key: 1522809295 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1556363727 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1623472591 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1757690319 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 2026125775 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 415513039 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-5 = 4
+
+________________________________________________________
+
+Finger Table for Node 1506032482 (node-6) | Predecessor: node-5 | Successor: node-7:
+Start Key: 1506032483 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032484 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032486 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032490 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032498 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032514 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032546 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032610 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032738 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506032994 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506033506 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506034530 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506036578 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506040674 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506048866 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506065250 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506098018 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506163554 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506294626 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1506556770 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1507081058 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1508129634 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1510226786 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1514421090 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1522809698 | Finger's Node Key: 1522810101 | Finger's Node URL: node-7
+Start Key: 1539586914 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1573141346 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1640250210 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1774467938 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 2042903394 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 432290658 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-6 = 2
+
+________________________________________________________
+
+Finger Table for Node 1522810101 (node-7) | Predecessor: node-6 | Successor: node-0:
+Start Key: 1522810102 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810103 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810105 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810109 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810117 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810133 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810165 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810229 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810357 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522810613 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522811125 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522812149 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522814197 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522818293 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522826485 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522842869 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522875637 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1522941173 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1523072245 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1523334389 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1523858677 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1524907253 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1527004405 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1531198709 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1539587317 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1556364533 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1589918965 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1657027829 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 1791245557 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 2059681013 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+Start Key: 449068277 | Finger's Node Key: 1405366768 | Finger's Node URL: node-0
+
+Total Word Count for node-7 = 1
+
+________________________________________________________
+
+Note that the Chord Ring Topology Ring Diagram can be found here:
+Chord_Ring_Topology.png
