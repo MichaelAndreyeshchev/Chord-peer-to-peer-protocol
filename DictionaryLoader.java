@@ -41,7 +41,14 @@ public class DictionaryLoader {
 
             reader.close();
             System.out.println("Dictionary loaded successfully.");
+            
+            node.printDictionary();
 
+            Node prevNode = node.predecessor();
+            while (prevNode.getID() != node.getID()) {
+                prevNode.printDictionary();
+                prevNode = prevNode.predecessor();
+            }
         } 
         
         catch (Exception e) {
