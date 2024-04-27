@@ -5,14 +5,14 @@ import java.rmi.registry.Registry;
 
 public class Client {
     public static void main(String[] args) {
-        if (args.length < 1) {
-            System.out.println("Start the program in the form: java Client <nodeURL>");
+        if (args.length < 3) {
+            System.out.println("Start the program in the form: java Client <nodeHost> <nodePort> <nodeURL>");
             return;
         }
 
         try {
-            String URL = args[0];
-            Registry registry = LocateRegistry.getRegistry();
+            String URL = args[2];
+            Registry registry = LocateRegistry.getRegistry(args[0], Integer.parseInt(args[1]));
             Node node = (Node) registry.lookup(URL);
         
             

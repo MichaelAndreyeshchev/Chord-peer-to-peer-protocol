@@ -14,7 +14,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java Client <nodeURL>
+$ java Client <nodeHost> <nodePort> <nodeURL>
 ```
 # Running 8-node Chord System with Dictionary Loader Program:
 ```
