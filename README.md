@@ -32,6 +32,14 @@ $ java NodeImp <node_URL_ID> <node_IP_Address>
 
 $ java Client <nodeHost> <nodePort> <nodeURL>
 ```
+# EXAMPLE -- Running a Specific Node with Interative Client Program:
+```
+$ javac *.java
+
+$ java NodeImp 0 csel-kh1250-04.cselabs.umn.edu
+
+$ java Client csel-kh1250-04.cselabs.umn.edu 1099 node-0
+```
 # Running 8-node Chord System with Interative Client Program:
 ```
 $ javac *.java
@@ -39,6 +47,14 @@ $ javac *.java
 $ ./try.bash
 
 $ java Client <nodeHost> <nodePort> <nodeURL>
+```
+# EXAMPLE -- Running 8-node Chord System with Interative Client Program:
+```
+$ javac *.java
+
+$ ./try.bash
+
+$ java Client csel-kh1250-04.cselabs.umn.edu 1099 node-0
 ```
 # Running 8-node Chord System with Dictionary Loader Program:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -52,6 +68,19 @@ $ javac *.java
 $ ./try.bash
 
 $ java DictionaryLoader <nodeURL> sample-dictionary-file.txt
+```
+# EXAMPLE -- Running 8-node Chord System with Dictionary Loader Program:
+Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
+```
+$ chmod +x try.bash
+```
+Then, running the code:
+```
+$ javac *.java
+
+$ ./try.bash
+
+$ java DictionaryLoader node-0 sample-dictionary-file.txt
 ```
 # Compilation using the Makefile:
 ```
