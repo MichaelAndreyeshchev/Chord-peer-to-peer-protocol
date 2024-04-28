@@ -15,7 +15,7 @@ import java.util.logging.SimpleFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NodeImp extends UnicastRemoteObject implements Node {
+public class NodeImp implements Node {
     private int ID; // node key value
     private String URL; // URL name for the node
     private Node predecessor; // predecessor of node
@@ -280,29 +280,41 @@ public class NodeImp extends UnicastRemoteObject implements Node {
     }
 
     public static void main(String[] args) throws RemoteException, IOException, NotBoundException {
-        if (args.length != 2) {
-            System.out.println("Usage: java NodeImp <node_URL_ID> <node_IP_Address>");
+        if (args.length != 3) {
+            System.out.println("Usage: java NodeImp <node_URL_ID> <node_IP_Address> <node_port>");
             System.exit(1);
         }
 
+        int port = Integer.parseInt(args[2]);
+        String hostname = args[1];
         String name = "node-" + args[0];
         NodeImp node;
+        Registry registry;
+
         try {
-            node = new NodeImp(name);
-            Registry registry = LocateRegistry.createRegistry(1099);
-            registry.rebind(name, node);
+            registry = LocateRegistry.createRegistry(port);
+        }
+
+        catch (Exception e) {
+            registry = LocateRegistry.getRegistry(port);
+        }
+
+        node = new NodeImp(name);
+        System.setProperty("java.rmi.server.hostname", hostname);
+        Node nodeStub = (Node) UnicastRemoteObject.exportObject(node, 0);
+
+        try {
+            registry.bind(name, nodeStub);
             System.out.println("Node " + name + " is running...");
         } 
         catch (Exception e) {
-            node = new NodeImp(name);
-            Registry registry = LocateRegistry.getRegistry(1099);
-            registry.rebind(name, node);
+            registry.rebind(name, nodeStub);
             System.out.println("Node " + name + " is running...");
         }
 
         if (!node.URL.equals("node-0")){
             System.out.println("Joining node-0...");
-            Node node0 = (Node) LocateRegistry.getRegistry(args[1], 1099).lookup("node-0");
+            Node node0 = (Node) LocateRegistry.getRegistry(hostname, port).lookup("node-0");
 
             while(!node0.acquireJoinLock(name));
             node.join(node0);

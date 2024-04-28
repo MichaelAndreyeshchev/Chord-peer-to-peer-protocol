@@ -28,7 +28,7 @@ given file
 ```
 $ javac *.java
 
-$ java NodeImp <node_URL_ID> <node_IP_Address>
+$ java NodeImp <node_URL_ID> <node_IP_Address> <node_port>
 
 $ java Client <nodeHost> <nodePort> <nodeURL>
 ```
@@ -36,9 +36,9 @@ $ java Client <nodeHost> <nodePort> <nodeURL>
 ```
 $ javac *.java
 
-$ java NodeImp 0 csel-kh1250-04.cselabs.umn.edu
+$ java NodeImp 0 csel-kh1250-03.cselabs.umn.edu 1098
 
-$ java Client csel-kh1250-04.cselabs.umn.edu 1099 node-0
+$ java Client csel-kh1250-03.cselabs.umn.edu 1098 node-0
 ```
 # Running 8-node Chord System with Interative Client Program:
 ```
@@ -54,9 +54,9 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java Client csel-kh1250-04.cselabs.umn.edu 1099 node-0
+$ java Client csel-kh1250-03.cselabs.umn.edu 1098 node-0
 ```
-# Running 8-node Chord System with Dictionary Loader Program:
+# Running 8-node Chord System with Dictionary Loader Program LOCALLY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
 ```
 $ chmod +x try.bash
@@ -69,7 +69,7 @@ $ ./try.bash
 
 $ java DictionaryLoader <nodeURL> sample-dictionary-file.txt
 ```
-# EXAMPLE -- Running 8-node Chord System with Dictionary Loader Program:
+# EXAMPLE -- Running 8-node Chord System with Dictionary Loader Program LOCALLY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
 ```
 $ chmod +x try.bash
@@ -82,6 +82,32 @@ $ ./try.bash
 
 $ java DictionaryLoader node-0 sample-dictionary-file.txt
 ```
+# Running 8-node Chord System with Dictionary Loader Program REMOTELY:
+Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
+```
+$ chmod +x try.bash
+```
+Then, running the code:
+```
+$ javac *.java
+
+$ ./remote.try.bash
+
+$ java DictionaryLoader <nodeURL> sample-dictionary-file.txt
+```
+# EXAMPLE -- Running 8-node Chord System with Dictionary Loader Program REMOTELY:
+Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
+```
+$ chmod +x try.bash
+```
+Then, running the code:
+```
+$ javac *.java
+
+$ ./remote.try.bash
+
+$ java DictionaryLoader node-0 sample-dictionary-file.txt
+```
 # Compilation using the Makefile:
 ```
 $ make
@@ -90,7 +116,7 @@ $ make
 ```
 $ make clean
 ```
-# Running 8 nodes using the Makefile:
+# Running 8 nodes using the Makefile LOCALLY ONLY:
 ```
 $ make run
 ```
