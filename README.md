@@ -42,7 +42,7 @@ $ java NodeImp 0 csel-kh1262-04.cselabs.umn.edu 1098
 
 $ java Client //csel-kh1262-04.cselabs.umn.edu:1098/node-0
 ```
-# Running 8-node Chord System with Interative Client Program:
+# Running 8-node Chord System with Interative Client Program LOCALLY:
 ```
 $ javac *.java
 
@@ -50,13 +50,13 @@ $ ./try.bash
 
 $ java Client <nodeURL>
 ```
-# EXAMPLE -- Running 8-node Chord System with Interative Client Program:
+# EXAMPLE -- Running 8-node Chord System with Interative Client Program LOCALLY:
 ```
 $ javac *.java
 
 $ ./try.bash
 
-$ java Client //csel-kh1262-04.cselabs.umn.edu:1098/node-0
+$ java Client //localhost:1098/node-0
 ```
 # Running 8-node Chord System with Dictionary Loader Program LOCALLY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -82,12 +82,12 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java DictionaryLoader //csel-kh1262-04.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
+$ java DictionaryLoader //localhost:1098/node-0 sample-dictionary-file.txt
 ```
 # Running 8-node Chord System with Dictionary Loader Program REMOTELY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
 ```
-$ chmod +x try.bash
+$ chmod +x remote.try.bash
 ```
 Then, running the code:
 ```
@@ -100,7 +100,7 @@ $ java DictionaryLoader <nodeURL> sample-dictionary-file.txt
 # EXAMPLE -- Running 8-node Chord System with Dictionary Loader Program REMOTELY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
 ```
-$ chmod +x try.bash
+$ chmod +x remote.try.bash
 ```
 Then, running the code:
 ```
