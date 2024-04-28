@@ -38,7 +38,7 @@ $ java Client <nodeURL>
 ```
 $ javac *.java
 
-$ java NodeImp 0 //csel-kh1262-04.cselabs.umn.edu 1098
+$ java NodeImp 0 csel-kh1262-04.cselabs.umn.edu 1098
 
 $ java Client //csel-kh1262-04.cselabs.umn.edu:1098/node-0
 ```
