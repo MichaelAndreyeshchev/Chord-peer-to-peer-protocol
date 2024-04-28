@@ -13,15 +13,15 @@ public class DictionaryLoader {
             return;
         }
 
-        String URL = args[0];
         String dictionaryFilePath = args[1];
-        String hostName = URL.split("/")[0].split(":")[0];
-        int port = Integer.parseInt(URL.split("/")[0].split(":")[1]);
-        String url = URL.split("/")[1];
+        String[] urlParts = args[0].split("/+", 3);
+        String[] hostDomain = urlParts[1].split(":");
+        String hostname = hostDomain[0];
+        String port = hostDomain[1];
 
         try {
-            Registry registry = LocateRegistry.getRegistry(hostName, port);
-            Node node = (Node) registry.lookup(url);
+            Registry registry = LocateRegistry.getRegistry(hostname, Integer.parseInt(port));
+            Node node = (Node) registry.lookup(urlParts[2]);
 
             String line;
             BufferedReader reader = new BufferedReader(new FileReader(dictionaryFilePath));

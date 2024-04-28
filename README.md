@@ -38,9 +38,9 @@ $ java Client <nodeURL>
 ```
 $ javac *.java
 
-$ java NodeImp 0 csel-kh1250-03.cselabs.umn.edu 1098
+$ java NodeImp 0 //csel-kh1250-03.cselabs.umn.edu 1098
 
-$ java Client csel-kh1250-03.cselabs.umn.edu:1098/node-0
+$ java Client //csel-kh1250-03.cselabs.umn.edu:1098/node-0
 ```
 # Running 8-node Chord System with Interative Client Program:
 ```
@@ -56,7 +56,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java Client csel-kh1250-03.cselabs.umn.edu:1098/node-0
+$ java Client //csel-kh1250-03.cselabs.umn.edu:1098/node-0
 ```
 # Running 8-node Chord System with Dictionary Loader Program LOCALLY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -82,7 +82,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java DictionaryLoader localhost:1099/node-0 sample-dictionary-file.txt
+$ java DictionaryLoader //csel-kh1250-03.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
 ```
 # Running 8-node Chord System with Dictionary Loader Program REMOTELY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -108,7 +108,7 @@ $ javac *.java
 
 $ ./remote.try.bash
 
-$ java DictionaryLoader localhost:1099/node-0 sample-dictionary-file.txt
+$ java DictionaryLoader //csel-kh1250-03.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
 ```
 # Compilation using the Makefile:
 ```
