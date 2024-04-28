@@ -4,7 +4,9 @@ Group members: Michael and Wyatt (andr0821 & rasmu984)
 This program has been checked for bugs and should not have any errors in any part of the system. 
 
 # IMPORTANT NOTE:
-Note that below "node_URL_ID" is an integer greater than or equal to 0, "nodeURL" are named as "node-ID" where ID is an integer greater than or equal to 0. NOTE THAT THE node-ID.log files need to be deleted if you want to have a fresh copy of the logs before you start up the Chord nodes. 
+Note that below "node_URL_ID" is an integer greater than or equal to 0, "nodeURL" are named as "node-ID" where ID is an integer greater than or equal to 0. NOTE THAT THE node-ID.log files need to be deleted if you want to have a fresh copy of the logs before you start up the Chord nodes.
+
+Also note, all of the test cases below are assuming that you are running on csel-kh1250-03.cselabs.umn.edu. If you are on a different host, change the host name appropriately.
 
 # File Details
 * ChordLogger.java contains the event logging containing the finger table information for each node as well as the word definition pair dictionary information.
@@ -30,7 +32,7 @@ $ javac *.java
 
 $ java NodeImp <node_URL_ID> <node_IP_Address> <node_port>
 
-$ java Client <nodeHost> <nodePort> <nodeURL>
+$ java Client <nodeURL>
 ```
 # EXAMPLE -- Running a Specific Node with Interative Client Program:
 ```
@@ -38,7 +40,7 @@ $ javac *.java
 
 $ java NodeImp 0 csel-kh1250-03.cselabs.umn.edu 1098
 
-$ java Client csel-kh1250-03.cselabs.umn.edu 1098 node-0
+$ java Client csel-kh1250-03.cselabs.umn.edu:1098/node-0
 ```
 # Running 8-node Chord System with Interative Client Program:
 ```
@@ -46,7 +48,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java Client <nodeHost> <nodePort> <nodeURL>
+$ java Client <nodeURL>
 ```
 # EXAMPLE -- Running 8-node Chord System with Interative Client Program:
 ```
@@ -54,7 +56,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java Client csel-kh1250-03.cselabs.umn.edu 1098 node-0
+$ java Client csel-kh1250-03.cselabs.umn.edu:1098/node-0
 ```
 # Running 8-node Chord System with Dictionary Loader Program LOCALLY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
