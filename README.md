@@ -6,7 +6,7 @@ This program has been checked for bugs and should not have any errors in any par
 # IMPORTANT NOTE:
 Note that below "node_URL_ID" is an integer greater than or equal to 0, "nodeURL" are named as "node-ID" where ID is an integer greater than or equal to 0. NOTE THAT THE node-ID.log files need to be deleted if you want to have a fresh copy of the logs before you start up the Chord nodes.
 
-Also note, all of the test cases below are assuming that you are running on csel-kh1250-03.cselabs.umn.edu. If you are on a different host, change the host name appropriately.
+Also note, all of the test cases below are assuming that you are running on csel-kh1262-04.cselabs.umn.edu. If you are on a different host, change the host name appropriately.
 
 # File Details
 * ChordLogger.java contains the event logging containing the finger table information for each node as well as the word definition pair dictionary information.
@@ -38,9 +38,9 @@ $ java Client <nodeURL>
 ```
 $ javac *.java
 
-$ java NodeImp 0 //csel-kh1250-03.cselabs.umn.edu 1098
+$ java NodeImp 0 //csel-kh1262-04.cselabs.umn.edu 1098
 
-$ java Client //csel-kh1250-03.cselabs.umn.edu:1098/node-0
+$ java Client //csel-kh1262-04.cselabs.umn.edu:1098/node-0
 ```
 # Running 8-node Chord System with Interative Client Program:
 ```
@@ -56,7 +56,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java Client //csel-kh1250-03.cselabs.umn.edu:1098/node-0
+$ java Client //csel-kh1262-04.cselabs.umn.edu:1098/node-0
 ```
 # Running 8-node Chord System with Dictionary Loader Program LOCALLY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -82,7 +82,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java DictionaryLoader //csel-kh1250-03.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
+$ java DictionaryLoader //csel-kh1262-04.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
 ```
 # Running 8-node Chord System with Dictionary Loader Program REMOTELY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -108,7 +108,7 @@ $ javac *.java
 
 $ ./remote.try.bash
 
-$ java DictionaryLoader //csel-kh1250-03.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
+$ java DictionaryLoader //csel-kh1262-04.cselabs.umn.edu:1098/node-0 sample-dictionary-file.txt
 ```
 # Compilation using the Makefile:
 ```
