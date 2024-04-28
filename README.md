@@ -4,9 +4,7 @@ Group members: Michael and Wyatt (andr0821 & rasmu984)
 This program has been checked for bugs and should not have any errors in any part of the system. 
 
 # IMPORTANT NOTE:
-Note that below "node_URL_ID" is an integer greater than or equal to 0, "nodeURL" are named as "node-ID" where ID is an integer greater than or equal to 0. NOTE THAT THE node-ID.log files need to be deleted if you want to have a fresh copy of the logs before you start up the Chord nodes.
-
-Also note, all of the test cases below are assuming that you are running on csel-kh1262-04.cselabs.umn.edu. If you are on a different host, change the host name appropriately.
+Also note, all of the test cases below are assuming that you are running on csel-kh1262-04.cselabs.umn.edu for the NodeImp.java. If you are on a different host, change the host name appropriately. You can run the Client.java or DictionaryLoader.java on a different kh machine.
 
 # File Details
 * ChordLogger.java contains the event logging containing the finger table information for each node as well as the word definition pair dictionary information.
