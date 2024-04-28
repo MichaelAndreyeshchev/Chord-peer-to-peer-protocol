@@ -80,7 +80,7 @@ $ javac *.java
 
 $ ./try.bash
 
-$ java DictionaryLoader node-0 sample-dictionary-file.txt
+$ java DictionaryLoader localhost:1099/node-0 sample-dictionary-file.txt
 ```
 # Running 8-node Chord System with Dictionary Loader Program REMOTELY:
 Note, for the bash file to work it may be necessary to give execute permissions beforehand using:
@@ -106,7 +106,7 @@ $ javac *.java
 
 $ ./remote.try.bash
 
-$ java DictionaryLoader node-0 sample-dictionary-file.txt
+$ java DictionaryLoader localhost:1099/node-0 sample-dictionary-file.txt
 ```
 # Compilation using the Makefile:
 ```
