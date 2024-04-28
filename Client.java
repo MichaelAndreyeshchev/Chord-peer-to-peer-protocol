@@ -5,15 +5,19 @@ import java.rmi.registry.Registry;
 
 public class Client {
     public static void main(String[] args) {
-        if (args.length < 3) {
-            System.out.println("Start the program in the form: java Client <nodeHost> <nodePort> <nodeURL>");
+        if (args.length != 1) {
+            System.out.println("Start the program in the form: java Client <someChordNodeURL>");
             return;
         }
 
         try {
-            String URL = args[2];
-            Registry registry = LocateRegistry.getRegistry(args[0], Integer.parseInt(args[1]));
-            Node node = (Node) registry.lookup(URL);
+            String[] urlParts = args[0].split("/+", 3);
+            String[] hostDomain = urlParts[1].split(":");
+            String hostname = hostDomain[0];
+            String port = hostDomain[1];
+
+            Registry registry = LocateRegistry.getRegistry(hostname, Integer.parseInt(port));
+            Node node = (Node) registry.lookup(urlParts[2]);
         
             
             Scanner scanner = new Scanner(System.in);
